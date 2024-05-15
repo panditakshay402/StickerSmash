@@ -1,10 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+// Rest of the import statements
+import { useFonts } from 'expo-font';
+
 export default function App() {
+
+  const [fontsLoaded] = useFonts({
+    'Inter-Black': require('./assets/fonts/Inter-Black-900.otf'),
+  });
+  <Text style={{ fontFamily: 'Inter-Black', fontSize: 80 }}>Inter Black</Text>
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Hi Akshay</Text>
+      <Text>Hot reload checking</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,7 +22,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FF1733',
     alignItems: 'center',
     justifyContent: 'center',
   },
